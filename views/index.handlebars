@@ -1,24 +1,28 @@
-<div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center" id="top-bar">
   <h1>BEST BURGERS!</h1>
-
   <h2>BEST BURGERS AT YOUR OWN DESPENSE!!</h2>
+  </div>
+
+  
 
   <ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-    {{/each}}
+   <li> {{#each burgers}}</li>
+    <li>{{#unless devoured}}</li>
+    <li>{{> burgers/burger-block devoured=true}}</li>
+    <li>{{/unless}}</li>
+    <li>{{/each}}</li>
   </ul>
 
   <h2>BURGERS ARE READY FOR YOU TO FEAST ON!!!</h2>
 
   <ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burgers/burger-block devoured=false}}
-    {{/if}}
-    {{/each}}
+    <li>{{#each burgers}}</li>
+    <li>{{#if devoured}}</li>
+    <li>{{> burgers/burger-block devoured=false}}</li>
+    <li>{{/if}}</li>
+    <li>{{/each}}</li>
   </ul>
 
   <h2>WHAT"S YOUR BURGER!!</h2>
@@ -37,4 +41,5 @@
 
     <button type="submit">Add Burger</button>
   </form>
+  </div>
 </div>

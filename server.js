@@ -8,7 +8,7 @@ var app = express();
 app.use(express.static(__dirname + "/public"));
 
 // Parse application body as JSON
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Set Handlebars.
